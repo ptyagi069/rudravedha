@@ -1,0 +1,1742 @@
+/*Global style*/
+.rudveda-landing-page.main {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  overflow: hidden;
+  font-family: Montserrrat, Arial, Helvetica, sans-serif;
+}
+
+/* Navigation Menu style */
+.small-screens {
+  display: none !important;
+}
+.NavigationSection {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.flexRowContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0 10px;
+  margin: 10px auto;
+  max-width: 1314px;
+}
+.flexRowLinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 10px;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.navItems {
+  transition-duration: 0.3s;
+  transition-property: transform;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.rudveda-landing-page .navItems a {
+  font: 500 16px/1.25 Montserrat, Helvetica, Arial, serif;
+  color: #313131;
+  text-decoration: none;
+}
+.rudveda-landing-page .navItems:hover {
+  transform: scale(1.1);
+}
+
+.companyLogo {
+  width: 207px;
+  object-fit: contain;
+}
+
+.bookNowButton {
+  min-width: 162px;
+  font: 600 16px/1.25 Montserrat, Helvetica, Arial, serif;
+  color: #b99d75;
+  text-align: center;
+  border-radius: 8px;
+  padding: 16px 38px;
+  border: 1px solid #b99d75;
+  transition: background-color 0.3s;
+}
+
+.bookNowButton:hover {
+  background-color: #0d4e20ff;
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.closeBtn {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 978px) {
+  .small-screens {
+    display: flex !important;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .closeBtn {
+    display: block;
+  }
+  .flexRowLinks {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: white;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 60px;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .flexRowLinks.active {
+    right: 0;
+  }
+
+  .navItems {
+    margin: 10px 0;
+  }
+
+  .bookNowButton {
+    margin-top: 20px;
+  }
+
+  .companyLogo {
+    margin-right: auto;
+  }
+}
+
+/*Hero Image Section Style*/
+.rudveda-landing-page .heroImgSection {
+  display: flex;
+  flex-direction: column;
+}
+.rudveda-landing-page .contentBoxDiv {
+  display: flex;
+  flex-direction: column;
+  margin: 4px auto 0;
+  width: 93%;
+  max-width: 1343px;
+  background: url(../assets/64897c8bd796c9dc9c2b84937abb0270.png) no-repeat
+    fixed center;
+}
+.rudveda-landing-page .flexContainerDiv {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(
+    0deg,
+    rgba(1, 1, 1, 0.72) -11.67%,
+    rgba(0, 0, 0, 0) 113.23%
+  );
+}
+.rudveda-landing-page .flexColumnDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 55px 0;
+  margin: 221px auto 159px;
+  width: 966px;
+  max-width: 85%;
+}
+
+.rudveda-landing-page .flexColumnTitleDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.rudveda-landing-page .mainHeroTitle {
+  display: flex;
+  justify-content: center;
+  font: 400 48px/1.22 Montserrat, Helvetica, Arial, serif;
+  color: #f1d100;
+  text-align: center;
+}
+
+.rudveda-landing-page .secondaryHeroTitle {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font: 800 89px/1.21 Montserrat, Helvetica, Arial, serif;
+  color: white;
+  text-align: center;
+}
+
+.rudveda-landing-page .bookNowHeroButton {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 296px;
+  max-width: 100%;
+  font: 600 18px/1.22 Montserrat, Helvetica, Arial, serif;
+  color: white;
+  text-align: center;
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 8px;
+  padding: 22px 8px;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+.rudveda-landing-page .bookNowHeroButton:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/*Hero Text Section Style*/
+.rudveda-landing-page .herotextSection {
+  display: flex;
+  flex-direction: column;
+  min-height: 467px;
+}
+.rudveda-landing-page .big_title {
+  display: flex;
+  justify-content: center;
+  margin: 83px auto 0;
+  width: 1220px;
+  max-width: 85%;
+  font: 400 36px/1.77 Montserrat, Helvetica, Arial, serif;
+  color: #313131;
+  text-align: center;
+}
+
+/*Media Queries (Responsive)*/
+
+@media (max-width: 991px) {
+  .rudveda-landing-page .flexColumnDiv {
+    margin: 150px auto;
+  }
+  .rudveda-landing-page .flexRowContainer {
+    margin: 16px;
+  }
+  .rudveda-landing-page .mainHeroTitle {
+    align-items: flex-start;
+    font-size: 48px;
+  }
+  .rudveda-landing-page .secondaryHeroTitle {
+    align-items: flex-start;
+    font-size: 48px;
+  }
+  .rudveda-landing-page .big_title {
+    align-items: flex-start;
+    font-size: 32px;
+  }
+  .rudveda-landing-page .content_box1 {
+    margin: 150px 0 0 auto;
+  }
+  .rudveda-landing-page .servicesImage {
+    display: none;
+  }
+}
+@media (max-width: 575px) {
+  .rudveda-landing-page .flexColumnDiv {
+    margin: 100px auto;
+    gap: 30px 0;
+  }
+  .rudveda-landing-page .mainHeroTitle {
+    margin-bottom: 10px !important;
+    font-size: 36px !important;
+  }
+  .rudveda-landing-page .secondaryHeroTitle {
+    font-size: 36px !important;
+  }
+  .rudveda-landing-page .big_title {
+    margin: 80px auto 0;
+    font-size: 26px;
+  }
+  .rudveda-landing-page .servicesImage {
+    display: none;
+  }
+  .rudveda-landing-page .imageFigure {
+    margin: 80px auto 0;
+  }
+  .rudveda-landing-page .content_box1 {
+    margin: 80px 0 0 auto;
+  }
+  .rudveda-landing-page .flex_col {
+    margin: 66px 16px 72px auto;
+  }
+}
+@media (max-width: 479px) {
+  .rudveda-landing-page .flexColumnDiv {
+    gap: 30px 0;
+    margin: 150px auto;
+  }
+  .rudveda-landing-page .flexRowContainer {
+    -moz-column-gap: 8px;
+    column-gap: 8px;
+  }
+  .rudveda-landing-page .bookNowHeroButton {
+    width: 200px;
+  }
+  .rudveda-landing-page .big_title {
+    font-size: 24px;
+  }
+}
+@media (max-width: 383px) {
+  .rudveda-landing-page .big_title {
+    margin: 50px auto 0;
+  }
+  .rudveda-landing-page .imageFigure {
+    margin: 50px auto 0;
+  }
+  .rudveda-landing-page .content_box1 {
+    margin: 50px 0 0 auto;
+  }
+  .rudveda-landing-page .flex_col {
+    gap: 50px 0;
+    margin: 50px 8px 50px auto;
+  }
+}
+
+/*Our Room Section Style*/
+.rudveda-landing-page .roomHeadingSection {
+  display: flex;
+  flex-direction: column;
+}
+.rudveda-landing-page .imageFigure {
+  display: flex;
+  flex-direction: column;
+  margin: 81px auto 0;
+  width: 1162px;
+  max-width: 85%;
+  background: url(../assets/1a7261b48992135a14e9af011cf6e938.png) no-repeat
+    fixed center;
+}
+.rudveda-landing-page .content_box1 {
+  display: flex;
+  flex-direction: column;
+  margin: 243px 0 0 auto;
+  width: 528px;
+  max-width: 85%;
+  background-color: white;
+}
+.rudveda-landing-page .flex_col {
+  display: flex;
+  flex-direction: column;
+  gap: 52px 0;
+  margin: 66px 20px 72px auto;
+  width: 445px;
+  max-width: 85%;
+}
+
+/*3 Room Types Section Style*/
+.rudveda-landing-page .hero_title3 {
+  font: 500 70px/0.37 Montserrat, Helvetica, Arial, serif;
+  color: #313131;
+}
+@media (max-width: 991px) {
+  .rudveda-landing-page .hero_title3 {
+    align-items: flex-start;
+    font-size: 52px;
+  }
+}
+@media (max-width: 479px) {
+  .rudveda-landing-page .hero_title3 {
+    font-size: 36px;
+  }
+}
+.rudveda-landing-page .medium_title2 {
+  font: 300 24px/1.79 Montserrat, Helvetica, Arial, serif;
+  color: black;
+}
+@media (max-width: 991px) {
+  .rudveda-landing-page .medium_title2 {
+    align-items: flex-start;
+    font-size: 22px;
+  }
+}
+@media (max-width: 479px) {
+  .rudveda-landing-page .medium_title2 {
+    font-size: 20px;
+  }
+}
+.rudveda-landing-page .roomsOverviewSection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.rudveda-landing-page .flexContainerCol {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 26px 0;
+  margin: 99px auto 0;
+  width: 91.81%;
+  max-width: 1322.0625px;
+}
+@media (max-width: 575px) {
+  .rudveda-landing-page .flexContainerCol {
+    margin: 80px auto 0;
+  }
+}
+@media (max-width: 383px) {
+  .rudveda-landing-page .flexContainerCol {
+    margin: 50px auto 0;
+  }
+}
+.rudveda-landing-page .flexContainerRow {
+  display: flex;
+  gap: 0 29px;
+}
+@media (max-width: 1199px) {
+  .rudveda-landing-page .flexContainerRow {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px 29px;
+  }
+}
+.rudveda-landing-page .flexContainerColStandardDeluxe {
+  display: flex;
+  flex-direction: column;
+  margin: 13px 0 119px;
+  width: 335px;
+  min-width: 0;
+}
+
+.rudveda-landing-page .roomTypeTitleStandardDeluxe {
+  width: 266.9875183105px;
+  max-width: 85%;
+  font: 400 24px/1.66 Montserrat, Helvetica, Arial, serif;
+  color: #313131;
+}
+
+.rudveda-landing-page .roomDescStandardDeluxe {
+  margin: 10px 0 0;
+  font: 300 16px/1.62 Montserrat, Helvetica, Arial, serif;
+  color: black;
+}
+.rudveda-landing-page .flexContainerColActions {
+  display: flex;
+  flex-direction: column;
+  gap: 4px 0;
+  margin: 27px 0 0;
+  width: 134px;
+  max-width: 85%;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+.rudveda-landing-page .flexContainerColActions:hover {
+  transform: translateX(8px);
+}
+.rudveda-landing-page .viewAllRoomsBtn {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.rudveda-landing-page .viewAllRoomsBtn a {
+  text-decoration: none;
+  color: #313131;
+  font: 400 16px/1.62 Montserrat, Helvetica, Arial, serif;
+}
+.rudveda-landing-page .line2 {
+  width: 100%;
+  height: 1px;
+  min-height: 1px;
+  background-color: #6e6e6e;
+}
+.rudveda-landing-page .contentBoxStandardRoom {
+  display: flex;
+  flex-direction: column;
+  width: 464px;
+  min-width: 0;
+  background: url(../assets/4973499f43a336899d1cac9538079e43.png) no-repeat
+    fixed center;
+  transition-duration: 0.5s;
+  transition-property: transform;
+}
+.rudveda-landing-page .contentBoxStandardRoom:hover {
+  transform: scale(1.1);
+}
+
+.rudveda-landing-page .flex_col1 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
+  margin: 324px 0 19px 27px;
+  width: 224px;
+  max-width: 85%;
+}
+@media (max-width: 1199px) {
+  .rudveda-landing-page .flex_col1 {
+    width: 100%;
+  }
+  .rudveda-landing-page .contentBoxStandardRoom {
+    width: 100%;
+  }
+  .rudveda-landing-page .flexContainerColStandardDeluxe {
+    margin: 0;
+    width: 100%;
+  }
+}
+@media (max-width: 991px) {
+  .rudveda-landing-page .flex_col1 {
+    margin: 150px 0 19px 27px;
+  }
+  .rudveda-landing-page .roomTitleStandardRoom {
+    align-items: flex-start;
+    font-size: 22px;
+  }
+  .rudveda-landing-page .roomTypeTitleStandardDeluxe {
+    align-items: flex-start;
+    font-size: 22px;
+  }
+}
+@media (max-width: 575px) {
+  .rudveda-landing-page .flex_col1 {
+    margin: 80px 0 19px 16px;
+  }
+  .rudveda-landing-page .roomTitleStandardRoom {
+    font-size: 20px;
+  }
+  .rudveda-landing-page .roomTypeTitleStandardDeluxe {
+    font-size: 20px;
+  }
+}
+@media (max-width: 383px) {
+  .rudveda-landing-page .flex_col1 {
+    margin: 50px 0 19px 8px;
+  }
+}
+.rudveda-landing-page .roomTitleStandardRoom {
+  display: flex;
+  justify-content: center;
+  font: 300 24px/1.08 Montserrat, Helvetica, Arial, serif;
+  color: white;
+  text-align: center;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.rudveda-landing-page .flexContainerColBookingStandard {
+  display: flex;
+  flex-direction: column;
+  gap: 4px 0;
+  width: 84px;
+  max-width: 85%;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+.rudveda-landing-page .flexContainerColBookingStandard:hover {
+  transform: translateX(8px);
+}
+.rudveda-landing-page .roomTypebookNow {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 0 1px;
+  text-align: center;
+}
+.rudveda-landing-page .roomTypebookNow a {
+  text-decoration: none;
+  color: white;
+  font: 400 16px/1.62 Montserrat, Helvetica, Arial, serif;
+}
+.rudveda-landing-page .line1 {
+  width: 100%;
+  height: 1px;
+  min-height: 1px;
+  background-color: white;
+}
+.rudveda-landing-page .contentBoxDeluxeRoom {
+  display: flex;
+  flex-direction: column;
+  width: 464px;
+  min-width: 0;
+  background: url(../assets/ae03836e8cf3533f6ff894a70c3e0778.png) no-repeat
+    fixed center;
+  transition-duration: 0.5s;
+  transition-property: transform;
+}
+@media (max-width: 997px) {
+  .rudveda-landing-page .contentBoxDeluxeRoom {
+    width: 100%;
+    min-width: unset;
+  }
+}
+.rudveda-landing-page .contentBoxDeluxeRoom:hover {
+  transform: scale(1.1);
+}
+.rudveda-landing-page .flex_col2 {
+  display: flex;
+  flex-direction: column;
+  gap: 11px 0;
+  margin: 324px 0 19px 23px;
+  width: 171px;
+  max-width: 85%;
+}
+@media (max-width: 1199px) {
+  .rudveda-landing-page .flex_col2 {
+    width: 85%;
+  }
+}
+@media (max-width: 991px) {
+  .rudveda-landing-page .flex_col2 {
+    margin: 150px 0 19px 23px;
+  }
+}
+@media (max-width: 575px) {
+  .rudveda-landing-page .flex_col2 {
+    margin: 80px 0 19px 16px;
+  }
+}
+@media (max-width: 383px) {
+  .rudveda-landing-page .flex_col2 {
+    margin: 50px 0 19px 8px;
+  }
+}
+.rudveda-landing-page .roomTitleDeluxeRoom {
+  display: flex;
+  justify-content: center;
+  font: 300 24px/1.08 Montserrat, Helvetica, Arial, serif;
+  color: white;
+  text-align: center;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+@media (max-width: 991px) {
+  .rudveda-landing-page .roomTitleDeluxeRoom {
+    align-items: flex-start;
+    font-size: 22px;
+  }
+}
+@media (max-width: 479px) {
+  .rudveda-landing-page .roomTitleDeluxeRoom {
+    font-size: 20px;
+  }
+}
+
+.rudveda-landing-page .flexContainerColBookingDeluxe {
+  display: flex;
+  flex-direction: column;
+  gap: 3px 0;
+  width: 84px;
+  max-width: 85%;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+.rudveda-landing-page .flexContainerColBookingDeluxe:hover {
+  transform: translateX(8px);
+}
+
+.rudveda-landing-page .line3 {
+  margin: 0 1px 0 0;
+  width: 98.81%;
+  height: 1px;
+  min-height: 1px;
+  background-color: white;
+}
+.rudveda-landing-page .flexContainerRowGrandSuite {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+}
+@media (max-width: 991px) {
+  .rudveda-landing-page .flexContainerRowGrandSuite {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px 10px;
+  }
+}
+.rudveda-landing-page .contentBoxGrandSuite {
+  display: flex;
+  flex-direction: column;
+  width: 832px;
+  min-width: 0;
+  background: url(../assets/81bed789fe574c712adf6e33099e52cf.png) no-repeat
+    fixed center;
+  transition-duration: 0.5s;
+  transition-property: transform;
+}
+@media (max-width: 991px) {
+  .rudveda-landing-page .contentBoxGrandSuite {
+    width: 100%;
+    min-width: unset;
+  }
+}
+.rudveda-landing-page .contentBoxGrandSuite:hover {
+  transform: scale(1.1);
+}
+.rudveda-landing-page .flexContainerColGrandSuite {
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
+  margin: 301px 0 29px 23px;
+  width: 170px;
+  max-width: 85%;
+}
+@media (max-width: 991px) {
+  .rudveda-landing-page .flexContainerColGrandSuite {
+    margin: 150px 0 29px 23px;
+    width: 85%;
+  }
+}
+@media (max-width: 575px) {
+  .rudveda-landing-page .flexContainerColGrandSuite {
+    margin: 80px 0 29px 16px;
+  }
+}
+@media (max-width: 383px) {
+  .rudveda-landing-page .flexContainerColGrandSuite {
+    margin: 50px 0 29px 8px;
+  }
+}
+.rudveda-landing-page .roomTitleGrandSuite {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 0 1px;
+  font: 300 24px/1.08 Montserrat, Helvetica, Arial, serif;
+  color: white;
+  text-align: center;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+@media (max-width: 991px) {
+  .rudveda-landing-page .roomTitleGrandSuite {
+    align-items: flex-start;
+    font-size: 22px;
+  }
+}
+@media (max-width: 479px) {
+  .rudveda-landing-page .roomTitleGrandSuite {
+    font-size: 20px;
+  }
+}
+.rudveda-landing-page .roomTitleGrandSuite:hover {
+  transform: scale(1.1);
+}
+.rudveda-landing-page .flexContainerColBookingGrandSuite {
+  display: flex;
+  flex-direction: column;
+  gap: 4px 0;
+  width: 84px;
+  max-width: 85%;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+.rudveda-landing-page .flexContainerColBookingGrandSuite:hover {
+  transform: translateX(8px);
+}
+
+.rudveda-landing-page .flexContainerColGrandSuiteDetails {
+  display: flex;
+  flex-direction: column;
+  margin: 119px 0 10px;
+  width: 427px;
+  min-width: 0;
+}
+@media (max-width: 1199px) {
+  .rudveda-landing-page .flexContainerColGrandSuiteDetails {
+    margin: 26.5% 0 2.23% 10px;
+  }
+}
+@media (max-width: 991px) {
+  .rudveda-landing-page .flexContainerColGrandSuiteDetails {
+    margin: 0 0 0 10px;
+    width: 100%;
+    min-width: unset;
+  }
+}
+.rudveda-landing-page .roomTitleGrandSuiteDetails {
+  margin: 0 2px;
+  font: 400 24px/1.66 Montserrat, Helvetica, Arial, serif;
+  color: #313131;
+}
+@media (max-width: 991px) {
+  .rudveda-landing-page .roomTitleGrandSuiteDetails {
+    align-items: flex-start;
+    font-size: 22px;
+  }
+}
+@media (max-width: 479px) {
+  .rudveda-landing-page .roomTitleGrandSuiteDetails {
+    font-size: 20px;
+  }
+}
+.rudveda-landing-page .roomDescGrandSuite {
+  margin: 12px 0 0;
+  font: 300 16px/1.62 Montserrat, Helvetica, Arial, serif;
+  color: black;
+}
+.rudveda-landing-page .flexContainerColSeeAllRooms {
+  display: flex;
+  flex-direction: column;
+  gap: 4px 0;
+  margin: 29px 0 0;
+  width: 134px;
+  max-width: 85%;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+.rudveda-landing-page .flexContainerColSeeAllRooms:hover {
+  transform: translateX(8px);
+}
+
+.rudveda-landing-page .servicesOverviewSection {
+  display: flex;
+  flex-direction: column;
+}
+.rudveda-landing-page .servicesGroup {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 302px 0 30px 6.88%;
+  width: 661.987487793px;
+  max-width: 85%;
+}
+@media (max-width: 991px) {
+  .rudveda-landing-page .servicesGroup {
+    margin: 150px 0 30px 6.88%;
+  }
+}
+@media (max-width: 575px) {
+  .rudveda-landing-page .servicesGroup {
+    margin: 80px 0 30px 6.88%;
+  }
+}
+@media (max-width: 383px) {
+  .rudveda-landing-page .servicesGroup {
+    margin: 50px 0 30px 6.88%;
+  }
+}
+.rudveda-landing-page .servicesFlexRow {
+  position: absolute;
+  top: -156px;
+  right: -621.9936904907px;
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+  width: 1312.99px;
+}
+@media (max-width: 991px) {
+  .rudveda-landing-page .servicesFlexRow {
+    top: -114px;
+    right: -633.99px;
+  }
+}
+@media (max-width: 383px) {
+  .rudveda-landing-page .servicesFlexRow {
+    -moz-column-gap: 8px;
+    column-gap: 8px;
+  }
+}
+.rudveda-landing-page .servicesFlexCol {
+  display: flex;
+  flex-direction: column;
+  gap: 20px 0;
+  margin: 12px 0 602px;
+  width: 322px;
+  min-width: 0;
+}
+@media (max-width: 991px) {
+  .rudveda-landing-page .servicesFlexCol {
+    margin: 12px 0 150px;
+  }
+}
+@media (max-width: 590px) {
+  .rudveda-landing-page .servicesFlexCol {
+    margin: 40px 300px;
+    width: 100%;
+  }
+  .rudveda-landing-page .servicesOverviewSection {
+    margin: 60px 0;
+  }
+  .servicesDescription {
+    gap: 10px;
+  }
+}
+@media (max-width: 383px) {
+  .rudveda-landing-page .servicesFlexCol {
+    margin: 50px 0 50px;
+  }
+  .servicesDescription {
+    display: none;
+  }
+}
+.rudveda-landing-page .servicesMainTitle {
+  margin: 0 17px 0 0;
+  font: 500 40px/0.65 Montserrat, Helvetica, Arial, serif;
+  color: #313131;
+}
+@media (max-width: 991px) {
+  .rudveda-landing-page .servicesMainTitle {
+    align-items: flex-start;
+    font-size: 36px;
+  }
+}
+@media (max-width: 575px) {
+  .rudveda-landing-page .servicesMainTitle {
+    margin: 0 16px 0 0;
+  }
+}
+@media (max-width: 479px) {
+  .rudveda-landing-page .servicesMainTitle {
+    font-size: 32px;
+  }
+}
+@media (max-width: 383px) {
+  .rudveda-landing-page .servicesMainTitle {
+    margin: 0 8px 0 0;
+  }
+}
+.rudveda-landing-page .servicesDescription {
+  font: 300 16px/1.62 Montserrat, Helvetica, Arial, serif;
+  color: #07272d;
+}
+.rudveda-landing-page .servicesImageGroup {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 674px;
+  min-width: 0;
+}
+.rudveda-landing-page .servicesImage {
+  position: relative;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.rudveda-landing-page .servicesImageCaption {
+  position: absolute;
+  top: 108px;
+  left: -639.9937438965px;
+  width: 724.99px;
+  height: 754px;
+  background-color: white;
+  box-shadow: -1px 14px 32px 0 rgba(84, 84, 84, 0.06);
+}
+.rudveda-landing-page .servicesGrid {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 40px 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.rudveda-landing-page .serviceItemCard {
+  display: flex;
+  flex-direction: column;
+  grid-row: span 1;
+  grid-column: span 1;
+}
+.rudveda-landing-page .wifiInternetImage {
+  width: 50px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.rudveda-landing-page .wifiInternetTitle {
+  margin: 14px 0 0;
+  font: 700 18px/1.44 Montserrat, Helvetica, Arial, serif;
+  color: #313131;
+}
+
+.rudveda-landing-page .wifiInternetDescription {
+  margin: 9px 0 0;
+  font: 400 16px/1.62 Montserrat, Helvetica, Arial, serif;
+  color: #313131;
+}
+.rudveda-landing-page .swimmingPoolCard {
+  display: flex;
+  flex-direction: column;
+  grid-row: span 1;
+  grid-column: span 1;
+}
+.rudveda-landing-page .swimmingPoolImage {
+  width: 62px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.rudveda-landing-page .swimmingPoolTitle {
+  margin: 19px 0 0;
+  font: 700 18px/1.44 Montserrat, Helvetica, Arial, serif;
+  color: #313131;
+}
+.rudveda-landing-page .swimmingPoolDescription {
+  margin: 9px 0 0;
+  font: 400 16px/1.62 Montserrat, Helvetica, Arial, serif;
+  color: #313131;
+}
+.rudveda-landing-page .housekeepingCard {
+  display: flex;
+  flex-direction: column;
+  grid-row: span 1;
+  grid-column: span 1;
+}
+.rudveda-landing-page .housekeepingImage {
+  width: 50px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.rudveda-landing-page .housekeepingTitle {
+  margin: 15px 0 0;
+  font: 700 18px/1.44 Montserrat, Helvetica, Arial, serif;
+  color: #313131;
+}
+.rudveda-landing-page .housekeepingDescription {
+  margin: 7px 0 0;
+  font: 400 16px/1.62 Montserrat, Helvetica, Arial, serif;
+  color: #313131;
+}
+.rudveda-landing-page .breakfastInBedCard {
+  display: flex;
+  flex-direction: column;
+  gap: 9px 0;
+  grid-row: span 1;
+  grid-column: span 1;
+}
+.rudveda-landing-page .breakfastInBedImage {
+  width: 62px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.rudveda-landing-page .breakfastInBedTitle {
+  font: 700 18px/1.44 Montserrat, Helvetica, Arial, serif;
+  color: #313131;
+}
+@media (max-width: 1199px) {
+  .rudveda-landing-page .servicesImage {
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: 50% center;
+    object-position: 50% center;
+  }
+}
+@media (max-width: 991px) {
+  .rudveda-landing-page .breakfastInBedTitle {
+    align-items: flex-start;
+    font-size: 16px;
+  }
+  .rudveda-landing-page .housekeepingTitle {
+    align-items: flex-start;
+    font-size: 16px;
+  }
+  .rudveda-landing-page .swimmingPoolTitle {
+    align-items: flex-start;
+    font-size: 16px;
+  }
+  .rudveda-landing-page .wifiInternetTitle {
+    align-items: flex-start;
+    font-size: 16px;
+  }
+}
+@media (max-width: 575px) {
+  .rudveda-landing-page .servicesGrid {
+    -moz-column-gap: 16px;
+    column-gap: 16px;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+.rudveda-landing-page .breakfastInBedDescription {
+  font: 400 16px/1.62 Montserrat, Helvetica, Arial, serif;
+  color: #313131;
+}
+.rudveda-landing-page .laundryServicesCard {
+  display: flex;
+  flex-direction: column;
+  grid-row: span 1;
+  grid-column: span 1;
+}
+.rudveda-landing-page .laundryServicesImage {
+  width: 48px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.rudveda-landing-page .laundryServicesTitle {
+  margin: 16px 0 0;
+  font: 700 18px/1.44 Montserrat, Helvetica, Arial, serif;
+  color: #313131;
+}
+@media (max-width: 991px) {
+  .rudveda-landing-page .laundryServicesTitle {
+    align-items: flex-start;
+    font-size: 16px;
+  }
+}
+.rudveda-landing-page .laundryServicesDescription {
+  margin: 8px 0 0;
+  font: 500 16px/1.62 Montserrat, Helvetica, Arial, serif;
+  color: #313131;
+}
+.rudveda-landing-page .pickUpServiceCard {
+  display: flex;
+  flex-direction: column;
+  grid-row: span 1;
+  grid-column: span 1;
+}
+.rudveda-landing-page .pickUpServiceImage {
+  width: 52px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.rudveda-landing-page .pickUpServiceTitle {
+  margin: 14px 0 0;
+  font: 700 18px/1.44 Montserrat, Helvetica, Arial, serif;
+  color: #313131;
+}
+@media (max-width: 991px) {
+  .rudveda-landing-page .pickUpServiceTitle {
+    align-items: flex-start;
+    font-size: 16px;
+  }
+}
+.rudveda-landing-page .pickUpServiceDescription {
+  margin: 8px 0 0;
+  font: 400 16px/1.62 Montserrat, Helvetica, Arial, serif;
+  color: #313131;
+}
+.rudveda-landing-page .amenitiesSection {
+  display: flex;
+  flex-direction: column;
+}
+.rudveda-landing-page .sectionTitle {
+  display: flex;
+  justify-content: center;
+  margin: 152px 0 0 3.75%;
+  width: 666px;
+  max-width: 85%;
+  font: 500 40px/0.65 Montserrat, Helvetica, Arial, serif;
+  color: #313131;
+  text-align: center;
+}
+@media (max-width: 991px) {
+  .rudveda-landing-page .sectionTitle {
+    align-items: flex-start;
+    margin: 50px 0 0 3.75%;
+    font-size: 36px;
+    line-height: 50px;
+  }
+}
+@media (max-width: 575px) {
+  .rudveda-landing-page .sectionTitle {
+    margin: 80px 0 0 3.75%;
+  }
+}
+@media (max-width: 479px) {
+  .rudveda-landing-page .sectionTitle {
+    font-size: 32px;
+  }
+}
+@media (max-width: 383px) {
+  .rudveda-landing-page .sectionTitle {
+    margin: 50px 0 0 3.75%;
+  }
+}
+.rudveda-landing-page .amenitiesContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 44px auto 0;
+  width: 100%;
+  max-width: 1440px;
+  background-color: #ebebeb;
+}
+.rudveda-landing-page .flexColumnContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 95px auto 131px;
+  width: 86.63%;
+}
+@media (max-width: 575px) {
+  .rudveda-landing-page .flexColumnContainer {
+    margin: 80px auto;
+  }
+}
+@media (max-width: 383px) {
+  .rudveda-landing-page .flexColumnContainer {
+    margin: 50px auto;
+  }
+}
+.rudveda-landing-page .flexRowContainer1 {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+}
+@media (max-width: 991px) {
+  .rudveda-landing-page .flexRowContainer1 {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px 10px;
+  }
+}
+
+.rudveda-landing-page .amenityImage1 {
+  width: 70px;
+  max-width: 85%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.rudveda-landing-page .amenityImage2 {
+  margin: 0 9px 0 17px;
+  width: 63px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.rudveda-landing-page .amenityImage3 {
+  width: 41px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.rudveda-landing-page .amenityImage4 {
+  width: 57px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.rudveda-landing-page .amenityImage5 {
+  width: 55px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.rudveda-landing-page .amenityImage6 {
+  width: 49px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.rudveda-landing-page .flexRowContainer2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+  margin: 88px auto 0;
+  width: 92.99%;
+}
+@media (max-width: 991px) {
+  .rudveda-landing-page .flexRowContainer2,
+  .flexRowContainer3 {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px 10px;
+  }
+}
+@media (max-width: 575px) {
+  .rudveda-landing-page .flexRowContainer2 {
+    margin: 80px auto 0;
+  }
+}
+@media (max-width: 383px) {
+  .rudveda-landing-page .flexRowContainer2 {
+    margin: 50px auto 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .rudveda-landing-page .amenityItem7 {
+    margin: 0;
+    width: 100%;
+  }
+}
+.rudveda-landing-page .amenityImage7 {
+  width: 52px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+@media (max-width: 991px) {
+  .rudveda-landing-page .amenityItem8,
+  .amenityItem7 {
+    margin: 0;
+    width: 100%;
+    min-width: unset;
+  }
+}
+.rudveda-landing-page .amenityImage8 {
+  width: 46px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+@media (max-width: 991px) {
+  .rudveda-landing-page .amenityItem9 {
+    margin: 0;
+    width: 100%;
+    min-width: unset;
+  }
+}
+.rudveda-landing-page .amenityImage9 {
+  width: 46px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.rudveda-landing-page .amenityImage10 {
+  width: 73px;
+  max-width: 85%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.rudveda-landing-page .amenityImage11 {
+  width: 82px;
+  max-width: 85%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.rudveda-landing-page .amenityImage12 {
+  width: 62px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.rudveda-landing-page .flexRowContainer3 {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+  margin: 92px 4.49% 0 auto;
+  width: 85.25%;
+}
+@media (max-width: 767px) {
+  .rudveda-landing-page .flexRowContainer3 {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px 10px;
+  }
+}
+@media (max-width: 575px) {
+  .rudveda-landing-page .flexRowContainer3 {
+    margin: 80px 4.49% 0 auto;
+  }
+}
+@media (max-width: 383px) {
+  .rudveda-landing-page .flexRowContainer3 {
+    margin: 50px 4.49% 0 auto;
+  }
+}
+
+.rudveda-landing-page .amenityImage13 {
+  width: 47px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.rudveda-landing-page .amenityImage14 {
+  width: 59px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.rudveda-landing-page .amenityImage15 {
+  width: 59px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.rudveda-landing-page .amenityImage16 {
+  width: 58px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.rudveda-landing-page .amenityItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px 0;
+  width: 144px;
+  min-width: 0;
+}
+
+.rudveda-landing-page .amenityImage17 {
+  width: 41px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.rudveda-landing-page .amenityDescription {
+  display: flex;
+  justify-content: center;
+  font: 400 16px/1.62 Montserrat, Helvetica, Arial, serif;
+  color: dimgray;
+  text-align: center;
+}
+
+/*Hotel Rules Section Style*/
+.rudveda-landing-page .hotelRulesSection {
+  display: flex;
+  flex-direction: column;
+  background: var(--src) center center/cover no-repeat;
+}
+.rudveda-landing-page .flexRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 0 10px;
+  margin: 130px auto 158px;
+  width: 1182px;
+  max-width: 85%;
+  padding: 0 18px 0 0;
+}
+.rudveda-landing-page .flexCol {
+  display: flex;
+  flex-direction: column;
+  gap: 50px 0;
+  width: 692px;
+  min-width: 0;
+}
+.rudveda-landing-page .heroTitle {
+  font: 500 40px/0.65 Montserrat, Helvetica, Arial, serif;
+  color: white;
+}
+
+.rudveda-landing-page .rulesSubtitle {
+  font: 600 20px/1.3 Montserrat, Helvetica, Arial, serif;
+  color: white;
+}
+
+.rudveda-landing-page .rulesSubtitle_span0,
+.rulesSubtitle_span2 {
+  font: 600 1em/1.3 Montserrat, Helvetica, Arial, serif;
+}
+.rudveda-landing-page .rulesSubtitle_span1,
+.rulesSubtitle_span3 {
+  font: 1em/1.3 Montserrat, Helvetica, Arial, serif;
+}
+.rudveda-landing-page .rulesImage {
+  margin: 61px 0 10px;
+  width: 404px;
+  min-width: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+@media (max-width: 1199px) {
+  .rudveda-landing-page .flexRow {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px 10px;
+  }
+  .rudveda-landing-page .flexCol {
+    width: 100%;
+    min-width: unset;
+  }
+  .rudveda-landing-page .rulesImage {
+    margin: 0;
+    width: 100%;
+    min-width: unset;
+    max-width: 404px;
+  }
+}
+@media (max-width: 991px) {
+  .rudveda-landing-page .heroTitle {
+    align-items: flex-start;
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .rudveda-landing-page .rulesSubtitle {
+    font-size: 18px;
+  }
+  .rudveda-landing-page .rulesSubtitle_box {
+    align-items: flex-start;
+  }
+}
+@media (max-width: 479px) {
+  .rudveda-landing-page .heroTitle {
+    font-size: 28px;
+    line-height: 40px;
+    text-align: center;
+  }
+  .rudveda-landing-page .rulesSubtitle {
+    font-size: 16px;
+  }
+}
+
+/*Privacy Policy Section Style*/
+.rudveda-landing-page .privacyPoliciesSection {
+  display: flex;
+  flex-direction: column;
+}
+.rudveda-landing-page .flexColDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 33px 0;
+  margin: 80px auto 0;
+  width: 92%;
+  max-width: 1336px;
+}
+
+.rudveda-landing-page .privacyPoliciesTitleH1 {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 1096px;
+  max-width: 85%;
+  font: 500 40px/0.65 Montserrat, Helvetica, Arial, serif;
+  color: #313131;
+  text-align: center;
+  line-height: 50px;
+}
+@media (max-width: 991px) {
+  .rudveda-landing-page .privacyPoliciesTitleH1 {
+    align-items: flex-start;
+    font-size: 36px;
+  }
+}
+@media (max-width: 479px) {
+  .rudveda-landing-page .privacyPoliciesTitleH1 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 383px) {
+  .rudveda-landing-page .privacyPoliciesTitleH1 {
+    font-size: 28px;
+  }
+}
+
+/*Privacy Policy Accordian Style*/
+.pro-accordion-wrapper {
+  margin: 40px auto;
+}
+
+.pro-accordion {
+  overflow: hidden;
+}
+
+.pro-accordion__item {
+  border: 1px solid #e0e0e0;
+  margin-bottom: 10px;
+}
+
+.pro-accordion__trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-inline: 50px;
+  padding-block: 28px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 2px !important;
+}
+
+.pro-accordion__trigger:hover {
+  background-color: #f0f0f0;
+}
+
+.pro-accordion__trigger span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  font: 600 16px/1.25 Montserrat, Helvetica, Arial, serif;
+}
+
+.pro-accordion__panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-in-out;
+}
+
+.pro-accordion__item.is-active .pro-accordion__panel {
+  max-height: 1000px;
+}
+
+.pro-accordion__panel p {
+  padding: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/*Guest Photo Gallery Section Style*/
+.rudveda-landing-page .guestsPhotoGallerySection {
+  display: flex;
+  flex-direction: column;
+}
+.rudveda-landing-page .flexColumnContainer1 {
+  display: flex;
+  flex-direction: column;
+  gap: 46px 0;
+  margin: 20px auto 10px;
+  width: 90%;
+  max-width: 90%;
+}
+.rudveda-landing-page .galleryTitle {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 85%;
+  font: 500 40px/0.65 Montserrat, Helvetica, Arial, serif;
+  color: #4e4e4e;
+  text-align: center;
+  line-height: 50px;
+}
+
+.rudveda-landing-page .photoGroup {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  width: 100%;
+  min-width: 0;
+}
+.rudveda-landing-page .photoItems {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+}
+
+.guestPhoto {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.guestPhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers its container while maintaining aspect ratio */
+  border-radius: 10px;
+}
+.guestPhoto.wide {
+  grid-column: span 2;
+}
+.guestPhoto.tall {
+  grid-row: span 2;
+}
+
+@media (max-width: 575px) {
+  .rudveda-landing-page .flexColumnContainer1 {
+    margin: 80px auto 10px;
+  }
+}
+@media (max-width: 383px) {
+  .rudveda-landing-page .flexColumnContainer1 {
+    margin: 50px auto 10px;
+  }
+}
+@media (max-width: 991px) {
+  .rudveda-landing-page .galleryTitle {
+    align-items: flex-start;
+    font-size: 36px;
+  }
+}
+@media (max-width: 479px) {
+  .rudveda-landing-page .galleryTitle {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 1399px) {
+  .rudveda-landing-page .photoGrid {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px 16px;
+  }
+}
+.loadMoreButton {
+  display: flex; /* Use Flexbox to center the link */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin: 20px 0;
+}
+.loadMoreButton p {
+  font: 400 18px/1.44 Montserrat, Helvetica, Arial, serif;
+  text-decoration: underline;
+  padding: 10px 20px;
+}
+.loadMoreButton p a {
+  color: #2a2a2a;
+}
+.load-more {
+  transition: background-color 0.3s ease;
+}
+.guestPhoto.hidden {
+  display: none !important;
+}
+
+@media (max-width: 991px) {
+  .loadMoreButton {
+    align-items: flex-start;
+    font-size: 16px;
+  }
+}
+
+/*Footer Section Style*/
+.rudveda-landing-page .footerSection {
+  display: flex;
+  flex-direction: column;
+}
+.rudveda-landing-page .flexRowLayout {
+  display: flex;
+  justify-content: space-around;
+  gap: 0 10px;
+  margin: 0 auto;
+  padding: 20px 100px;
+  width: 100%;
+  background-color: #313131;
+  color: white;
+}
+.footerLinks a {
+  display: flex;
+  font: 16px/1.44 Montserrat, Helvetica, Arial, serif;
+  color: white;
+  transition-duration: 0.3s;
+  transition-property: transform;
+  text-decoration: none;
+}
+.rudveda-landing-page .footerLinks:hover {
+  transform: scale(1.1);
+}
+.rudveda-landing-page .reservedRightsSection {
+  display: flex;
+  flex-direction: column;
+  min-height: 103px;
+}
+.rudveda-landing-page .highlight {
+  display: flex;
+  justify-content: center;
+  margin: 38px auto 39px;
+  max-width: 85%;
+  font: 400 18px/1.44 Montserrat, Helvetica, Arial, serif;
+  color: #5f5f5f;
+  text-align: center;
+  letter-spacing: -0.4px;
+}
+
+@media (max-width: 991px) {
+  .rudveda-landing-page .footerLinks,
+  .highlight {
+    align-items: flex-start;
+    font-size: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .rudveda-landing-page .footerLinks a {
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+  }
+  .rudveda-landing-page .flexRowLayout {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px 10px;
+  }
+}

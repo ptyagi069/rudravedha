@@ -261,7 +261,7 @@
 }
 @media (max-width: 575px) {
   .rudveda-landing-page .flexColumnDiv {
-    margin: 100px auto;
+    margin: 150px auto;
     gap: 30px 0;
   }
   .rudveda-landing-page .mainHeroTitle {
@@ -495,6 +495,7 @@
   }
   .rudveda-landing-page .contentBoxStandardRoom {
     width: 100%;
+    background-size: cover;
   }
   .rudveda-landing-page .flexContainerColStandardDeluxe {
     margin: 0;
@@ -579,10 +580,10 @@
   transition-duration: 0.5s;
   transition-property: transform;
 }
-@media (max-width: 997px) {
+@media (max-width: 1200px) {
   .rudveda-landing-page .contentBoxDeluxeRoom {
+    background-size: cover;
     width: 100%;
-    min-width: unset;
   }
 }
 .rudveda-landing-page .contentBoxDeluxeRoom:hover {
@@ -682,7 +683,7 @@
 @media (max-width: 991px) {
   .rudveda-landing-page .contentBoxGrandSuite {
     width: 100%;
-    min-width: unset;
+    background-size: cover;
   }
 }
 .rudveda-landing-page .contentBoxGrandSuite:hover {
@@ -752,13 +753,13 @@
 .rudveda-landing-page .flexContainerColGrandSuiteDetails {
   display: flex;
   flex-direction: column;
-  margin: 119px 0 10px;
+  margin: 119px 20px 10px;
   width: 427px;
   min-width: 0;
 }
 @media (max-width: 1199px) {
   .rudveda-landing-page .flexContainerColGrandSuiteDetails {
-    margin: 26.5% 0 2.23% 10px;
+    margin: 10% 0 2% 10px;
   }
 }
 @media (max-width: 991px) {
@@ -811,13 +812,13 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  margin: 302px 0 30px 6.88%;
-  width: 661.987487793px;
+  margin: 302px 0 30px 6%;
+  width: 662px;
   max-width: 85%;
 }
 @media (max-width: 991px) {
   .rudveda-landing-page .servicesGroup {
-    margin: 150px 0 30px 6.88%;
+    margin: 90px 0 30px 50px;
   }
 }
 @media (max-width: 575px) {
@@ -841,8 +842,18 @@
 }
 @media (max-width: 991px) {
   .rudveda-landing-page .servicesFlexRow {
-    top: -114px;
-    right: -633.99px;
+    top: 0;
+    right: 0;
+    position: relative;
+    height: 150px;
+  }
+}
+@media (max-width: 600px) {
+  .rudveda-landing-page .servicesFlexRow {
+    top: 0;
+    right: 0;
+    position: relative;
+    height: 150px;
   }
 }
 @media (max-width: 383px) {
@@ -865,13 +876,6 @@
   }
 }
 @media (max-width: 590px) {
-  .rudveda-landing-page .servicesFlexCol {
-    margin: 40px 300px;
-    width: 100%;
-  }
-  .rudveda-landing-page .servicesOverviewSection {
-    margin: 60px 0;
-  }
   .servicesDescription {
     gap: 10px;
   }
@@ -881,7 +885,7 @@
     margin: 50px 0 50px;
   }
   .servicesDescription {
-    display: none;
+    font-size: 12px !important;
   }
 }
 .rudveda-landing-page .servicesMainTitle {
@@ -931,11 +935,16 @@
 .rudveda-landing-page .servicesImageCaption {
   position: absolute;
   top: 108px;
-  left: -639.9937438965px;
-  width: 724.99px;
+  left: -640px;
+  width: 724px;
   height: 754px;
   background-color: white;
   box-shadow: -1px 14px 32px 0 rgba(84, 84, 84, 0.06);
+}
+@media (max-width: 383px) {
+  .rudveda-landing-page .servicesImageCaption {
+    box-shadow: 0;
+  }
 }
 .rudveda-landing-page .servicesGrid {
   position: relative;
@@ -1524,6 +1533,9 @@
   border: 1px solid #e0e0e0;
   margin-bottom: 10px;
 }
+.pro-accordion__item:active {
+  background-color: #cccccc;
+}
 
 .pro-accordion__trigger {
   display: flex;
@@ -1554,6 +1566,7 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 1s ease-in-out;
+  padding-inline: 30px;
 }
 
 .pro-accordion__item.is-active .pro-accordion__panel {

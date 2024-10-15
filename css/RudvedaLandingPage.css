@@ -1753,3 +1753,59 @@
     gap: 30px 10px;
   }
 }
+.photoItems img {
+  transition: transform 0.3s ease-in-out;
+}
+.photoItems img:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.viewer {
+  display: none;
+  position: fixed; /* Ensures full-screen coverage */
+  top: 10px;
+  left: 0;
+  width: 100vw; /* Covers full viewport width */
+  height: 100vh; /* Covers full viewport height */
+  background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Places it above other elements */
+}
+
+.viewer-content {
+  /* Size of the image will be set dynamically */
+}
+
+.close {
+  position: absolute;
+  top: 100px; /* Keep it visible at the top-right */
+  right: 50px;
+  color: white; /* Make the close button visible */
+  font-size: 40px; /* Larger size for visibility */
+  cursor: pointer;
+  z-index: 1000; /* Ensure the close button is above everything else */
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Center the button vertically */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 30px; /* Font size for navigation buttons */
+  color: black; /* Color for the navigation buttons */
+  z-index: 1000; /* Make sure it's above the image */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.left {
+  left: 20px; /* Position left button */
+}
+
+.right {
+  right: 20px; /* Position right button */
+}

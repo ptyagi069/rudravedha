@@ -785,56 +785,56 @@
                 <div class="guestPhoto tall">
                   <img
                     src="./assets/9304b6f7924eaf832dbe2f4559611afe.png"
-                    alt="image 1"
+                    alt="image 1" onclick="openViewer(this)"
                   />
                 </div>
                 <div class="guestPhoto wide">
                   <img
                     src="./assets/cb633cbd518173b5ab2d199ce335b23b.png"
-                    alt="image 2"
+                    alt="image 2" onclick="openViewer(this)"
                   />
                 </div>
                 <div class="guestPhoto">
                   <img
                     src="./assets/ef9633a063f2a1103b028cf492e1fafa.png"
-                    alt="image 3"
+                    alt="image 3" onclick="openViewer(this)"
                   />
                 </div>
                 <div class="guestPhoto">
                   <img
                     src="./assets/bc6a8d18d3c9001c2ab7fb9600e16ccd.png"
-                    alt="image 4"
+                    alt="image 4" onclick="openViewer(this)"
                   />
                 </div>
                 <div class="guestPhoto">
                   <img
                     src="./assets/b64665943477c16bc8f627561b80923b.png"
-                    alt="image 5"
+                    alt="image 5" onclick="openViewer(this)"
                   />
                 </div>
                 <div class="guestPhoto">
                   <img
                     src="./assets/affed2889a231c3738625e658c062a11.png"
-                    alt="image 6"
+                    alt="image 6" onclick="openViewer(this)"
                   />
                 </div>
                 <!--Hidden Items-->
                 <div class="guestPhoto hidden">
                   <img
                     src="./assets/affed2889a231c3738625e658c062a11.png"
-                    alt="image 7"
+                    alt="image 7" onclick="openViewer(this)"
                   />
                 </div>
                 <div class="guestPhoto hidden">
                   <img
                     src="./assets/bc6a8d18d3c9001c2ab7fb9600e16ccd.png"
-                    alt="image 8"
+                    alt="image 8" onclick="openViewer(this)"
                   />
                 </div>
                 <div class="guestPhoto wide hidden">
                   <img
                     src="./assets/cb633cbd518173b5ab2d199ce335b23b.png"
-                    alt="image 9"
+                    alt="image 9" onclick="openViewer(this)"
                   />
                 </div>
               </div>
@@ -844,9 +844,15 @@
               </div>
             </div>
           </div>
+      
         </div>
       </section>
-
+      <div id="imageViewer" class="viewer">
+        <span class="close" onclick="closeViewer()">&times;</span>
+        <button class="nav-button left" onclick="changeImage(-1)">&#10094;</button>
+        <img class="viewer-content" id="viewerImage">
+        <button class="nav-button right" onclick="changeImage(1)">&#10095;</button>
+    </div>
       <!--------------------------------------------------------- Footer Section ----------------------------------------------->
       <section class="footerSection">
         <div class="flexRowLayout">
@@ -944,6 +950,59 @@
       x.className = "flexRowLinks";
     }
   }
+
+  let currentIndex = 0; // To keep track of the currently displayed image
+const images = []; // Array to store the image sources
+
+function openViewer(img) {
+    const viewer = document.getElementById("imageViewer");
+    const viewerImg = document.getElementById("viewerImage");
+    
+    // Store the image sources
+    images.length = 0; // Clear the previous images
+    document.querySelectorAll('.photoItems img').forEach((image) => {
+        images.push(image.src);
+    });
+
+    // Get the current image index
+    currentIndex = images.indexOf(img.src);
+
+    // Set the new dimensions to 2x the original size
+    viewerImg.style.width = img.naturalWidth * 2 + "px";
+    viewerImg.style.height = img.naturalHeight * 2 + "px";
+    
+    // Set the source of the image
+    viewerImg.src = img.src;
+    
+    // Display the viewer
+    viewer.style.display = "flex";
+}
+
+function closeViewer() {
+    document.getElementById("imageViewer").style.display = "none";
+}
+
+function changeImage(direction) {
+    currentIndex += direction; // Update the index based on the direction
+    // Wrap around if out of bounds
+    if (currentIndex < 0) {
+        currentIndex = images.length - 1;
+    } else if (currentIndex >= images.length) {
+        currentIndex = 0;
+    }
+    
+    // Update the viewer image
+    const viewerImg = document.getElementById("viewerImage");
+    const newImage = new Image();
+    
+    // Load the new image and set its size
+    newImage.src = images[currentIndex];
+    newImage.onload = function() {
+        viewerImg.src = newImage.src;
+        viewerImg.style.width = newImage.naturalWidth * 2 + "px";
+        viewerImg.style.height = newImage.naturalHeight * 2 + "px";
+    };
+}
 </script>
 
   </body>
